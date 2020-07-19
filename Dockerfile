@@ -29,6 +29,8 @@ RUN \
   DEBIAN_FRONTEND="noninteractive" dpkg -i /tmp/omada-sdn-controller_4.1.5-1_all.deb &&\
   rm -f /usr/sbin/policy-rc.d && rm -f /tmp/omada-sdn-controller_4.1.5-1_all.deb
 
+COPY omadad /etc/default/omadad
+
 WORKDIR /opt/tplink/OmadaController
 EXPOSE 8088 8043 27001/udp 27002 29810/udp 29811 29812 29813
 VOLUME ["/opt/tplink/OmadaController/data","/opt/tplink/OmadaController/work","/opt/tplink/OmadaController/logs"]
