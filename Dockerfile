@@ -10,7 +10,7 @@ RUN \
   apt-get update &&\
   DEBIAN_FRONTEND="noninteractive" apt-get install -y gosu net-tools tzdata wget curl  libboost-chrono1.65.1 libboost-filesystem1.65.1 libboost-program-options1.65.1 libboost-regex1.65.1 libboost-system1.65.1 libboost-thread1.65.1 libicu60 libpcrecpp0v5 libsnappy1v5 libstemmer0d libyaml-cpp0.5v5 openjdk-8-jdk-headless --no-install-recommends &&\
   cd /tmp/ &&\
-  wget ftp://ftp.rent-a-guru.de/private/omada-sdn-controller_4.1.5-1_all.deb &&\
+  wget ftp://ftp.rent-a-guru.de/private/omada-sdn-controller-4.2.4_1_all.deb &&\
   wget --no-check-certificate https://github.com/ddcc/mongodb/releases/download/v3.2.22-2/mongodb-clients_3.2.22-2_armhf.deb &&\
   wget --no-check-certificate https://github.com/ddcc/mongodb/releases/download/v3.2.22-2/mongodb-server_3.2.22-2_all.deb &&\
   wget --no-check-certificate https://github.com/ddcc/mongodb/releases/download/v3.2.22-2/mongodb-server-core_3.2.22-2_armhf.deb &&\
@@ -26,8 +26,8 @@ RUN \
   echo exit 101 > /usr/sbin/policy-rc.d &&\
   chmod +x /usr/sbin/policy-rc.d &&\
   echo "**** Install Omada Controller ****" &&\
-  DEBIAN_FRONTEND="noninteractive" dpkg -i /tmp/omada-sdn-controller_4.1.5-1_all.deb &&\
-  rm -f /usr/sbin/policy-rc.d && rm -f /tmp/omada-sdn-controller_4.1.5-1_all.deb
+  DEBIAN_FRONTEND="noninteractive" dpkg -i /tmp/omada-sdn-controller-4.2.4_1_all.deb &&\
+  rm -f /usr/sbin/policy-rc.d && rm -f /tmp/omada-sdn-controller-4.2.4_1_all.deb
 
 COPY omadad /etc/default/omadad
 
