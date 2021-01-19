@@ -1,0 +1,4 @@
+#!/bin/bash
+version=4.2.4-1
+docker build --tag ronaldo1965/omada-sdn-controller:$version --no-cache . 2>&1
+docker push  ronaldo1965/omada-sdn-controller:$version

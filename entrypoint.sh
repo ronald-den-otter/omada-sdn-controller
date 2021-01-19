@@ -5,8 +5,14 @@ set -e
 id omadad
 
 # set default time zone and notify user of time zone
-export TZ
 TZ="${TZ:-Etc/UTC}"
+export TZ
+
+ls -l /etc/localtime
+rm /etc/localtime
+ln -s /usr/share/zoneinfo/$TZ /etc/localtime
+ls -l /etc/localtime
+
 echo "INFO: Time zone set to '${TZ}'"
 
 # make sure permissions are set appropriately on each directory
