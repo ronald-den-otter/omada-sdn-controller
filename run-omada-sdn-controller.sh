@@ -1,5 +1,6 @@
 #!/bin/bash
-version=latest
+#version=latest
+version=4.2.4-1
 #version=4.1.5-1
 
 # migrate to new version with:
