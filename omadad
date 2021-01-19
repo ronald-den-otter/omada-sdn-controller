@@ -1,0 +1,32 @@
+# Config settings for Omada SDN Controller
+# This file is sourced by the shell from /etc/init.d/omadad and /usr/bin/omadactl.
+
+#HOME_DIR="/opt/tplink/OmadaController" # Home of Omada SDN Controller
+#APP_NAME="Omada SDN Controller"        # Application name
+#PID_FILE="/var/run/omadad.pid"         # PID file for Omada SDN Controller
+#DEF_BKUP="$HOME_DIR/backup"            # Default directory for database dumps
+#NICE_VAL="10"                          # Nice value (-20 to 19)
+
+# Set to 1 to disable start of Omada SDN Controller at boot time.
+# It still can be started manually by the 'omadactl' command.
+DISABLE=0
+
+# Definitions for the Java VM                           # Where your JRE lives:
+#JAVA_HOME=$EAPC_HOME/jre                               # TP-Link embedded JRE
+#JAVA_HOME=/usr/lib/jvm/default-java                    # Debian
+#JAVA_HOME=/usr/lib/jvm/jdk-8-oracle-arm32-vfp-hflt/jre # Raspbian
+#JAVA_HOME=/opt/jvm/jre1.8.0_192                        # Custom location
+#JAVA_JSVC=/usr/bin/jsvc        # Searched for in $PATH automatically
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-armhf/jre
+JAVA_CMD=/usr/lib/jvm/java-8-openjdk-armhf/jre/bin/java        # Searched for in $PATH automatically
+
+# Java runtime options
+#JAVA_OPTS="-server -Xms128m -Xmx1024m -XX:MaxHeapFreeRatio=60 -XX:MinHeapFreeRatio=30 -XX:+HeapDumpOnOutOfMemoryError"
+JAVA_OPTS="-server -Xms128m -Xmx512m -XX:MaxHeapFreeRatio=60 -XX:MinHeapFreeRatio=30 -XX:+HeapDumpOnOutOfMemoryError"
+
+# Config settings for Omada SDN Controller - don't change!
+VERSION=4.1.5 SSD=jsvc
+
+# NOTE: DO NOT CHANGE THE NEXT LINE (except for the value)!
+# It is used by 'omadactl -S'.
+WAIT_TIME=120
