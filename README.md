@@ -11,8 +11,8 @@ mongodb 3.2.22-2 for ARMHF           (Thanks Dominic Chen https://github.com/ddc
 openjdk-8-jdk-headless               (Although there are still doubts, didn't find any problems)  
 
 See also:
-https://hub.docker.com/r/ronaldo1965/omada-controller
+https://hub.docker.com/repository/docker/ronaldo1965/omada-sdn-controller
 
 Docker:
-docker pull ronaldo1965/omada-controller
+docker pull ronaldo1965/omada-sdn-controller
 
